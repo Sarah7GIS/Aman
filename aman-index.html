@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>أمان | فكرة مشروع</title>
+  <style>
+    :root{--navy:#18323d;--teal:#147a69;--soft:#eef6f3;--muted:#5c7077;--line:#dce8e4;--paper:#f7faf9}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--navy);font-family:Tahoma,Arial,sans-serif;line-height:1.75}.page{max-width:1040px;margin:0 auto;padding:28px 18px 48px}.hero{background:linear-gradient(125deg,#e5f3ee,#f2f8f6);border:1px solid var(--line);border-radius:22px;padding:30px}.eyebrow{color:var(--teal);font-weight:bold;font-size:14px}.hero h1{font-size:clamp(28px,5vw,42px);line-height:1.25;margin:8px 0 12px}.hero p{max-width:720px;color:#405961;font-size:17px;margin:0}.tag{display:inline-block;margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:6px 12px;color:var(--teal);font-size:13px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}.card h2{font-size:20px;margin:0 0 10px}.card p{color:var(--muted);margin:0}.steps{display:grid;gap:12px;margin:16px 0 0;padding:0;list-style:none}.steps li{display:flex;gap:12px;align-items:flex-start}.number{flex:0 0 30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--soft);color:var(--teal);font-weight:bold}.map-card{margin-top:18px}.map-head{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:12px}.map-head h2{margin:0}.map-link{color:var(--teal);font-weight:bold;text-decoration:none}.map-link:hover{text-decoration:underline}.map-frame{width:100%;height:430px;border:1px solid var(--line);border-radius:14px;display:block;background:#e9f0ed}.caption{font-size:12px;color:var(--muted);margin-top:9px}.note{background:#fff8e7;border-right:4px solid #dbb44f;padding:14px 16px;border-radius:10px;margin-top:18px;color:#675526;font-size:14px}.footer{text-align:center;color:var(--muted);font-size:12px;margin-top:22px}.demo-card{margin-top:18px}.demo-action{margin-top:14px;border:0;border-radius:10px;background:#b93643;color:white;padding:13px 20px;font:700 16px Tahoma,Arial,sans-serif;cursor:pointer}.demo-action:focus{outline:3px solid #e9a6ac;outline-offset:2px}.demo-status{margin-top:14px;padding:12px;border-radius:10px;background:#f3f6f5;color:var(--muted)}.contact-list{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.contact{padding:13px;border:1px solid var(--line);border-radius:12px;background:#fbfdfc}.contact b{display:block}.contact small{color:var(--muted)}.distance{display:block;color:var(--teal);font-weight:bold;margin-top:6px}@media(max-width:700px){.contact-list{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="eyebrow">فكرة مشروع تخرج · عرض مبدئي</div>
+      <h1>أمان </h1>
+      <p>تصوّر لتطبيق يساعد الشخص وقت الخطر على طلب المساعدة ومشاركة موقعه مع أشخاص يثق بهم، مع إظهار الأماكن القريبة على الخريطة.</p>
+      <span class="tag">نموذج توضيحي — لا يرسل استغاثات حقيقية</span>
+    </header>
+
+    <section class="grid" aria-label="تعريف بالمشروع">
+      <article class="card">
+        <h2>المشكلة التي يعالجها</h2>
+        <p>قد يصعب على الشخص شرح مكانه بسرعة في موقف طارئ. يهدف المشروع إلى جعل طلب المساعدة ومشاركة الموقع أوضح وأسهل.</p>
+      </article>
+      <article class="card">
+        <h2>كيف يمكن أن يعمل؟</h2>
+        <ol class="steps">
+          <li><span class="number">١</span><span>يختار المستخدم أشخاصًا موثوقين ويمنح التطبيق إذن الموقع عند الحاجة.</span></li>
+          <li><span class="number">٢</span><span>يضغط زر الاستغاثة لمشاركة موقعه معهم.</span></li>
+          <li><span class="number">٣</span><span>يعرض التطبيق موقع الاستغاثة على خريطة ويساعد على تقدير القرب.</span></li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="card demo-card" aria-labelledby="sos-title">
+      <h2 id="sos-title">تجربة زر الاستغاثة</h2>
+      <p>اضغطي الزر لعرض شكل تجربة محلية وأشخاص موثوقين افتراضيين.</p>
+      <button class="demo-action" id="sos-demo" type="button">محاكاة استغاثة</button>
+      <div class="demo-status" id="sos-status" aria-live="polite">لم تبدأ المحاكاة بعد.</div>
+      <div class="contact-list" id="trusted-people" hidden>
+        <div class="contact"><b>شخص موثوق ١</b><small>بيانات تجريبية</small><span class="distance">حوالي ٠٫٨ كم</span></div>
+        <div class="contact"><b>شخص موثوق ٢</b><small>بيانات تجريبية</small><span class="distance">حوالي ١٫٥ كم</span></div>
+        <div class="contact"><b>شخص موثوق ٣</b><small>بيانات تجريبية</small><span class="distance">حوالي ٢٫٢ كم</span></div>
+      </div>
+    </section>
+
+    <section class="card map-card">
+      <div class="map-head">
+        <h2>خريطة الزقازيق</h2>
+        <a class="map-link" href="https://www.openstreetmap.org/?mlat=30.5853&mlon=31.5035#map=14/30.5853/31.5035" target="_blank" rel="noopener">فتح الخريطة بحجم كامل ↗</a>
+      </div>
+      <iframe class="map-frame" title="خريطة تفاعلية لمركز الزقازيق من OpenStreetMap" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=31.466%2C30.55%2C31.54%2C30.62&amp;layer=mapnik&amp;marker=30.5853%2C31.5035" allowfullscreen></iframe>
+      <p class="caption">الخريطة من OpenStreetMap ومتمركزة قرب وسط الزقازيق. حرّكيها أو كبّريها داخل الإطار، أو افتحيها في صفحة كاملة.</p>
+    </section>
+
+    <aside class="note"><b>حدود العرض:</b> زر الاستغاثة والأشخاص القريبون محاكاة فقط. لا تستخدم الصفحة GPS أو جهات اتصال حقيقية، ولا ترسل تنبيهات. أي نسخة لاحقة ستحتاج موافقة صريحة على الموقع ومراجعة الخصوصية والأمان قبل الاستخدام الفعلي.</aside>
+    <footer class="footer">بيانات الخريطة © OpenStreetMap contributors · صفحة عرض تجريبية</footer>
+  </main>
+  <script>
+    document.getElementById('sos-demo').addEventListener('click', function () {
+      document.getElementById('sos-status').textContent = 'تم تفعيل محاكاة الاستغاثة. لم يُرسل أي تنبيه حقيقي ولم يُستخدم موقعك.';
+      document.getElementById('trusted-people').hidden = false;
+    });
+  </script>
+</body>
+</html>
